@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightslategray;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.form{
+  border: 5px;
+  background-color: #00B7FF;
+  width: 600px;
+  height: 300px;
+  text-align: center;
+  margin-left: 400px;
+}
+
+#button{
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#button:hover{
+background: lightgreen;
+}
