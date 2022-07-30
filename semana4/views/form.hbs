@@ -1,7 +1,7 @@
 {{!-- <script defer src="javascripts/sendData.js"></script> --}}
 <div id="form" class="form">
 <h2>GAMERS</h2>
-<form action="/createGame" method="POST">
+<form method="POST">
 <p>Player 1</p>
 <input type="text" placeholder="nombre" name="gamer" id="gamer1" required style="text-align: center;">
 <p>Player 2</p>
@@ -9,6 +9,7 @@
 <p>Player 3</p>
 <input type="text" placeholder="nombre" name="gamer" id="gamer3" required style="text-align: center;">
 <br><br>
-<button type="submit" id="button">Enviar Datos</button>
+<button type="submit" formaction="createGame" id="button">Crear Juego</button><br>
+<button type="submit" formaction="startGame" id="button">Iniciar Juego</button>
 </form>
 </div>

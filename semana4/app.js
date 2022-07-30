@@ -33,8 +33,8 @@ app.use('/users', require('./routes/users'));
 //app.use('/createGame', require('./routes/formulario'));
 app.use('/createGame', require('./controllers/showForm'));
 app.use('/createGame', require('./controllers/createGame'));
-app.use('/game', require('./controllers/listPlayer'));
-app.use('/status', require('./controllers/startGame'));
+app.use('/game', require('./controllers/game'));
+app.use('/startGame', require('./controllers/startGame'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

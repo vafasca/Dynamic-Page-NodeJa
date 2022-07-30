@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const Game = require('../models/game');
 const User = require('../models/player');
 
-
 router.post('/', function (req, res, next) {
     const game = new Game({
         gamers: req.body.gamer,
@@ -22,6 +21,7 @@ router.post('/', function (req, res, next) {
         });
         gamers.save();
     }
+    idForGame = game._id.toString();
 });
 
 module.exports = router;
