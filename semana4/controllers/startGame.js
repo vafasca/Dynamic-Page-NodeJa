@@ -29,6 +29,7 @@ router.post('/', function (req, res, next) {
                         inProgress: false,
                         bet: 0,
                         idWinner: result[0]._id.toString(),
+                        idGame: idForGame,
                         name: result[0].gamer
                     });
                     apuesta.save();
@@ -41,6 +42,7 @@ router.post('/', function (req, res, next) {
                         inProgress: false,
                         bet: 0,
                         idWinner: result[1]._id.toString(),
+                        idGame: idForGame,
                         name: result[1].gamer
                     });
                     apuesta.save();
@@ -53,6 +55,7 @@ router.post('/', function (req, res, next) {
                         inProgress: false,
                         bet: 0,
                         idWinner: result[2]._id.toString(),
+                        idGame: idForGame,
                         name: result[2].gamer
                     });
                     apuesta.save();

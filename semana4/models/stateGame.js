@@ -6,6 +6,7 @@ const stateSchema = new Schema({
     inProgress: Boolean,
     bet: Number,
     idWinner: String,
+    idGame: String,
     name: String
 }, { timestamp: true });
 

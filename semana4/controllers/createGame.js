@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Game = require('../models/game');
 const User = require('../models/player');
-
+global.idForGame;
 router.post('/', function (req, res, next) {
     const game = new Game({
         gamers: req.body.gamer,
