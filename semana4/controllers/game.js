@@ -9,7 +9,7 @@ var status_array = [];
 var lastStatus;
 
 router.get('/:id', function (req, res, next) {
-  var idForGame = req.params.id;
+  var idSended = req.params.id;
   State.find(
 
     { idGame: req.params.id }
@@ -18,7 +18,7 @@ router.get('/:id', function (req, res, next) {
       return res.send(err)
     }
     if (status) {
-      gamers_promises = status.map(function(idForGame) {
+      gamers_promises = status.map(function(idSended) {
         return User.find({ idGame: req.params.id }).then((gamers) => {
           gamers_array = gamers;
           status_array = status;
@@ -26,7 +26,7 @@ router.get('/:id', function (req, res, next) {
         });
       });
       return Promise.all(gamers_promises).then(()=>{
-        res.json({idGame: idForGame, gamers: gamers_array, winner: status_array[lastStatus]});
+        res.json({idGame: idSended, gamers: gamers_array, winner: status_array[lastStatus]});
     });
     }
   });
